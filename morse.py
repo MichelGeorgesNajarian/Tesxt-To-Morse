@@ -2,9 +2,9 @@ import sys
 
 def letterToMorse(letterNum):
     morseAlphabet = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--."]
-    if letterNum >= 65 and letterNum =< 90 :
+    if letterNum > 64 and letterNum < 910 :
         letterNum -= 65
-    elif letterNum >= 97 and letterNum =< 122:
+    elif letterNum > 96 and letterNum < 123:
         letterNum -= 97
     elif letterNum == 32:
         return '/'
