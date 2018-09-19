@@ -1,7 +1,6 @@
 import sys
 
 def letterToMorse(letterNum):
-    morseAlphabet = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--."]
     if letterNum > 64 and letterNum < 910 :
         letterNum -= 65
     elif letterNum > 96 and letterNum < 123:
@@ -13,6 +12,7 @@ def letterToMorse(letterNum):
     return morseAlphabet[letterNum]+"/"
 
 phrase = sys.argv[1]
+morseAlphabet = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--."]
 morseSentence = ""
 for letter in phrase:
     morseSentence += letterToMorse(ord(letter))
