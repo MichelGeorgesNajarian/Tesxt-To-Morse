@@ -1,7 +1,9 @@
 import sys
 
 def letterToMorse(letterNum):
-    if letterNum > 64 and letterNum < 910 :
+    if not ((letterNum > 64 and letterNum < 91) or (letterNum > 96 and letterNum < 123) or letterNum == 32):
+        return ''
+    elif letterNum > 64 and letterNum < 910 :
         letterNum -= 65
     elif letterNum > 96 and letterNum < 123:
         letterNum -= 97
